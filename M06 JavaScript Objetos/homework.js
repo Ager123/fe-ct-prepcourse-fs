@@ -7,6 +7,25 @@ function crearGato(nombre, edad) {
    // La propiedad "meow" será una función que retorne el string: "Meow!".
    // Retornar el objeto.
    // Tu código:
+   //opcion 1
+   let objeto={
+      nombre: nombre,
+      edad: edad,
+      meow: function(){return "Meow!"}
+   };
+   return objeto;
+   //opcion 2
+   // let objeto={};
+   // objeto.nombre=nombre;
+   // objeto.edad=edad;
+   // objeto.meow= function () {return "Meow!"};
+   // return objeto;
+   //opcion 3
+   // return {
+   //       nombre: nombre,
+   //       edad: edad,
+   //       meow: function(){return "Meow!"}
+   //    }
 }
 
 function nuevoUsuario(nombre, email, password) {
@@ -14,6 +33,12 @@ function nuevoUsuario(nombre, email, password) {
    // Este debe tener las propiedades: "nombre", "email" y "password" con sus respectivos valores.
    // Retornar el objeto.
    // Tu código:
+   let objeto2={};
+   objeto2["nombre"]=nombre;
+   objeto2.email=email;
+   objeto2["password"]=password;
+   return objeto2;
+   // return {nombre,email,password}
 }
 
 function agregarPropiedad(objeto, propiedad) {
@@ -22,19 +47,22 @@ function agregarPropiedad(objeto, propiedad) {
    // Esta propiedad será igual al valor `null`.
    // Retornar el objeto.
    // Tu código:
+   objeto[propiedad]=null;
+   return objeto;
 }
-
 function invocarMetodo(objeto, metodo) {
    // El parámetro "metodo" es un string que coincide con el nombre de una propiedad del objeto recibido.
    // Esta propiedad contiene una función en su interior. Debes invocarla/ejecutarla.
    // [NOTA]: no necesitar retornar nada.
    // Tu código:
+   objeto[metodo]();
 }
 
 function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
    // El parámetro "objetoMisterioso" posee una propiedad con el nombre "numeroMisterioso".
    // Debes multiplicar este número por 5 y retornar el resultado.
    // Tu código:
+   return objetoMisterioso["numeroMisterioso"] *5
 }
 
 function eliminarPropiedad(objeto, propiedad) {
